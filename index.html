@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
+  <title>The Gadget Flow</title>
+</head>
+
+<body>
+  <div id="layerBg"></div>
+
+  <header>
+    <div id="navbar-top">
+      <div class="nav-flex">
+        <div id="logo">
+          <a href="/">
+            <img id="logo-image" src="/assets/images/logo.png" alt="logo" width="100" height="30">
+          </a>
+        </div>
+        <div class="nav-menu" id="browseMain">
+          <ul>
+            <li>
+              <a href="" class="nav-link"><i class="fa-solid fa-compass"></i> Discover</a>
+            </li>
+            <li>
+              <a href="" class="nav-link"><i class="fa-solid fa-star"></i> Staff Picks</a>
+            </li>
+            <li>
+              <a href="" class="nav-link"><i class="fa-solid fa-tag"></i> Top Brands</a>
+            </li>
+            <li>
+              <a href="" class="nav-link"><i class="fa-solid fa-chart-line"></i> Trending</a>
+            </li>
+            <li>
+              <a href="" class="nav-link"><i class="fa-solid fa-layer-group"></i> Magazine</a>
+            </li>
+          </ul>
+        </div>
+        <div id="globalSearch">
+          <form action="/search.php" method="get">
+            <input type="text" placeholder="Search" class="input" name="query" id="globalSearchInput" required>
+            <i class="fas fa-search search-icon"></i>
+          </form>
+        </div>
+        <div class="nav-menu ml-2">
+          <ul>
+            <span class="nav-link nav-circle" id="toggleMoreMenu"><i class="fa-solid fa-bars"></i></span>
+          </ul>
+        </div>
+        <div class="nav-flex">
+          <div class="nav-menu ml-2">
+            <ul>
+              <span class="nav-link nav-circle" id="toggleMobileMenu"><i class="fa-solid fa-bars"></i></span>
+            </ul>
+          </div>
+          <a href="/login" class="btn btn-primary btn-rounded login-btn">Join/Log in</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar-bottom">
+      <div class="nav-menu-bottom swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide toggle-dropdown-menu">
+            <span class="nav-link"><i class="fa-solid fa-circle bullet"></i> Top Categories <i class="fa-solid fa-caret-down caret-down"></i></span>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Best Summer Gadgets</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Crowdfunding Projects</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Star Wars Gifts</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Geek Gifts and Gadgets</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Smart Living</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Work Desks</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Best Work Gadgets</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Best Home Accessories and Gadgets</a>
+          </li>
+          <li class="swiper-slide">
+            <a href="" class="nav-link"><i class="fa-solid fa-circle bullet"></i> Best Smart Phones</a>
+          </li>
+        </ul>
+      </div>
+      <div class="category-dropdown-menu">
+        <ul class="dropdown-menu">
+          <li>
+            <a href="/categories/cool-gadgets-gifts/">Cool New Gadgets</a>
+          </li>
+          <li>
+            <a href="/categories/tech-gadgets/">Tech and Gadgets</a>
+          </li>
+          <li>
+            <a href="/categories/gaming-gadgets/">Gaming Gadgets</a>
+          </li>
+          <li>
+            <a href="/categories/ai-gadgets/">AI Gadgets</a>
+          </li>
+          <li>
+            <a href="/categories/office/">Office Gadgets</a>
+          </li>
+          <li>
+            <a href="/categories/gadgets-for-men/">Gadgets for Men</a>
+          </li>
+          <li>
+            <a href="/categories/useful1/">Useful Gadgets</a>
+          </li>
+          <li>
+            <a href="/categories/travel-gadgets/">Travel Gadgets</a>
+          </li>
+          <li>
+            <a href="/best-mac-accessories/">Mac Accessories</a>
+          </li>
+          <li>
+            <a href="/categories/car-accessories/">Car Accessories</a>
+          </li>
+          <li>
+            <a href="/categories/pet-accessories/">Pet Accessories</a>
+          </li>
+          <li>
+            <a href="/categories/coffee-club/">Coffee Accessories</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="moreMenu">
+
+      <div class="nav-menu mb-3" id="mediumBrowseMenu">
+        <ul>
+          <li>
+            <a href="" class="nav-link"><i class="fa-solid fa-compass"></i> Discover</a>
+          </li>
+          <li>
+            <a href="" class="nav-link"><i class="fa-solid fa-star"></i> Staff Picks</a>
+          </li>
+          <li>
+            <a href="" class="nav-link"><i class="fa-solid fa-tag"></i> Top Brands</a>
+          </li>
+          <li>
+            <a href="" class="nav-link"><i class="fa-solid fa-chart-line"></i> Trending</a>
+          </li>
+          <li>
+            <a href="" class="nav-link"><i class="fa-solid fa-layer-group"></i> Magazine</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menus-container">
+        <div class="item">
+          <p>Explore More</p>
+          <ul>
+            <li>
+              <a href="">Brands</a>
+            </li>
+            <li>
+              <a href="">Newsletters</a>
+            </li>
+            <li>
+              <a href="">Affiliate</a>
+            </li>
+            <li>
+              <a href="">Discounts</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <p>About</p>
+          <ul>
+            <li>
+              <a href="">Meet the Team</a>
+            </li>
+            <li>
+              <a href="">Brand Assets</a>
+            </li>
+            <li>
+              <a href="">Careers</a>
+            </li>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+            <li>
+              <a href="">Help Center</a>
+            </li>
+            <li>
+              <a href="">Carbon Neutral</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <p>Legal</p>
+          <ul>
+            <li>
+              <a href="">Terms of Use</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">Cookie Policy</a>
+            </li>
+            <li>
+              <a href="">Fact-Checking</a>
+            </li>
+            <li>
+              <a href="">Ethics Policy</a>
+            </li>
+            <li>
+              <a href="">Corrections Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <p>Services</p>
+          <ul>
+            <li>
+              <a href="">List your Product</a>
+            </li>
+            <li>
+              <a href="">Managed Services</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu">
+      <div class="mobile-menu-container">
+
+        <form action="/search.php" method="get" class="mobile-search">
+          <input type="text" placeholder="Search" class="input" name="query" required>
+          <i class="fas fa-search search-icon"></i>
+        </form>
+
+        <ul class="mobile-nav-menu">
+          <li>
+            <div class="mobile-nav-menu-heading">
+              <p>Discover</p>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="mobile-sub-menu">
+              <div class="mobile-sub-menu-item">
+                <a href="">All Categories</a>
+                <a href="">Staff Picks</a>
+                <a href="">Top Brands</a>
+                <a href="">Discounts</a>
+                <a href="">Trending</a>
+                <a href="">Magazine</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-menu-heading">
+              <p>About</p>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="mobile-sub-menu">
+              <div class="mobile-sub-menu-item">
+                <a href="">Meet the Team</a>
+                <a href="">Brand Assets</a>
+                <a href="">Careers</a>
+                <a href="">Contact Us</a>
+                <a href="">Help Center</a>
+                <a href="">Carbon Neutral</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-menu-heading">
+              <p>Services</p>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="mobile-sub-menu">
+              <div class="mobile-sub-menu-item">
+                <a href="">List your Product</a>
+                <a href="">Managed Services</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-menu-heading">
+              <p>Explore more</p>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="mobile-sub-menu">
+              <div class="mobile-sub-menu-item">
+                <a href="">Brands</a>
+                <a href="">Get the Apps</a>
+                <a href="">Newsletters</a>
+                <a href="">Affiliate</a>
+                <a href="">Webinars</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="mobile-nav-menu-heading">
+              <p>Legal</p>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="mobile-sub-menu">
+              <div class="mobile-sub-menu-item">
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Cookie Policy</a>
+                <a href="">Fact-Checking</a>
+                <a href="">Ethics Policy</a>
+                <a href="">Corrections Policy</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mobile-menu-share">
+          <a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+    </div>
+  </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
