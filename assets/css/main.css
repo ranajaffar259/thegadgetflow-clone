@@ -10,6 +10,12 @@ body {
   overflow-y: auto;
 }
 
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
 a {
   color: #E87070;
   text-decoration: none;
@@ -310,13 +316,17 @@ header #moreMenu .menus-container .item ul a:hover {
   border-radius: 5px;
 }
 header #mobileMenu {
+  z-index: 1000;
   display: none;
   position: absolute;
   height: calc(100vh - 123px);
   width: 100%;
+  overflow: scroll;
   top: 123px;
   left: 0;
   right: 0;
+  background-color: rgba(255, 255, 255, 0.788);
+  backdrop-filter: blur(10px);
   bottom: 0;
   overflow: auto;
 }
@@ -358,6 +368,7 @@ header #mobileMenu .mobile-menu-container .mobile-nav-menu {
 }
 header #mobileMenu .mobile-menu-container .mobile-nav-menu li {
   margin-bottom: 30px;
+  overflow: hidden;
 }
 header #mobileMenu .mobile-menu-container .mobile-nav-menu .mobile-nav-menu-heading {
   display: flex;
@@ -409,10 +420,262 @@ main {
   margin-bottom: 20px;
 }
 
+.hero-banner {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.hero-banner > .left {
+  width: 50%;
+  height: 450px;
+}
+@media screen and (max-width: 1250px) {
+  .hero-banner > .left {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hero-banner > .left {
+    width: 100%;
+  }
+}
+.hero-banner > .left .sponsors-slide {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.hero-banner > .left .sponsors-slide .swiper-button-next,
+.hero-banner > .left .sponsors-slide .swiper-button-prev {
+  width: unset;
+  height: unset;
+}
+.hero-banner > .left .sponsors-slide .swiper-button-next.swiper-button-disabled,
+.hero-banner > .left .sponsors-slide .swiper-button-prev.swiper-button-disabled {
+  pointer-events: unset;
+}
+.hero-banner > .left .sponsors-slide .swiper-button-next:after,
+.hero-banner > .left .sponsors-slide .swiper-button-prev:after {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.462745098);
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  z-index: 500;
+  height: 40px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-banner > .left .sponsors-slide .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-banner > .left .sponsors-slide .swiper-slide img {
+  display: block;
+  user-select: none;
+  object-fit: cover;
+  object-position: left;
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 700px) {
+  .hero-banner > .left .sponsors-slide .swiper-slide img {
+    height: auto;
+  }
+}
+.hero-banner > .left .sponsors-slide .autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+.hero-banner > .left .sponsors-slide .autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: white;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+.hero-banner > .right {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media screen and (max-width: 700px) {
+  .hero-banner > .right {
+    display: none;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .hero-banner > .right {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .hero-banner > .right .item-mag {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hero-banner > .right .item-trending {
+    display: none;
+  }
+}
+.hero-banner > .right > .item .from-our-mag {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  height: 450px;
+}
+.hero-banner > .right > .item .from-our-mag .dark-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3725490196));
+}
+.hero-banner > .right > .item .from-our-mag img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hero-banner > .right > .item .from-our-mag .content {
+  position: absolute;
+  bottom: 0;
+  padding: 35px;
+  z-index: 200;
+}
+.hero-banner > .right > .item .from-our-mag .content .mag-tag {
+  display: inline-block;
+  background-color: rgba(251, 251, 251, 0.7921568627);
+  backdrop-filter: blur(10px);
+  color: black;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.hero-banner > .right > .item .from-our-mag .content p.title {
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1;
+  color: white;
+}
+.hero-banner > .right > .item .trending {
+  box-shadow: -2px 4px 19px -10px rgba(119, 119, 119, 0.81);
+  background-color: #fff;
+  height: 450px;
+  border-radius: 20px;
+  overflow: auto;
+}
+.hero-banner > .right > .item .trending .header {
+  padding: 25px 30px 20px;
+  background-color: #E87070;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-banner > .right > .item .trending .header p {
+  margin-bottom: 0;
+  color: white;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  font-size: 20px;
+}
+.hero-banner > .right > .item .trending .header a.view-all {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 30px;
+  letter-spacing: -0.5px;
+  font-size: 13px;
+  background-color: #e24c4c;
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero-banner > .right > .item .trending .body {
+  padding: 10px 20px 0;
+}
+.hero-banner > .right > .item .trending .body > .item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-banner > .right > .item .trending .body > .item .counter {
+  font-size: 16px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 50%;
+  border: 1px solid #E87070;
+  color: #E87070;
+}
+.hero-banner > .right > .item .trending .body > .item .title {
+  line-height: 1;
+  font-weight: 400;
+  width: calc(100% - 30px);
+}
+.hero-banner > .right > .item .trending .body > .item .title a {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.862745098);
+  letter-spacing: -0.5px;
+}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.container-md {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.container-lg {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
   width: 100%;
 }
 

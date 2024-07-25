@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiperNav = new Swiper('.nav-menu-bottom', {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: 'auto',  // Automatically adjust based on slide widths
