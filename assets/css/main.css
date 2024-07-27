@@ -8,6 +8,11 @@
 body {
   overflow-x: hidden;
   overflow-y: auto;
+  padding-top: 128px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 html,
@@ -25,7 +30,7 @@ a:hover {
 }
 
 header {
-  position: static;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -318,7 +323,7 @@ header #moreMenu .menus-container .item ul a:hover {
 header #mobileMenu {
   z-index: 1000;
   display: none;
-  position: absolute;
+  position: fixed;
   height: calc(100vh - 123px);
   width: 100%;
   overflow: scroll;
@@ -413,6 +418,21 @@ header #mobileMenu .mobile-menu-container .mobile-menu-share i {
 }
 header #mobileMenu .mobile-menu-container .mobile-menu-share i:hover {
   color: rgba(0, 0, 0, 0.631372549);
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.fixed-mobile {
+  position: fixed;
+  top: -140px;
+}
+
+.show-header {
+  transition: top 0.3s ease;
+  top: 0;
 }
 
 main {
